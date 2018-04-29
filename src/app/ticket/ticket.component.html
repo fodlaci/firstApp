@@ -1,0 +1,63 @@
+<div class="example-container">
+
+<mat-toolbar color="pink">
+
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <span>Jegyárak</span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+
+</mat-toolbar>
+
+<mat-sidenav-container class="example-sidenav-container">
+
+    <mat-sidenav #snav>
+      <mat-nav-list>
+         <a mat-list-item [routerLink]="['/season']">Bérletek</a>
+         <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+
+    <mat-sidenav-content>
+
+          <div class="container">
+
+          <!-- The justified navigation menu is meant for single line per list item.
+               Multiple lines will require custom code not provided by Bootstrap. -->
+          <div class="masthead">
+
+          </div>
+
+
+          <!-- Example row of columns -->
+          <div class="row">
+            <div class="col-lg-6">
+              <h2>Napi jegyek</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+           </div>
+            <div class="col-lg-6">
+              <h2>Bérletek</h2>
+              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+              <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+          </div>
+
+          <!-- Site footer -->
+          <footer class="footer">
+            <p>&copy; 2018 Company, Inc.</p>
+          </footer>
+
+        </div> <!-- /container -->
+
+    </mat-sidenav-content>
+
+
+</mat-sidenav-container>
+</div>
+
+
+

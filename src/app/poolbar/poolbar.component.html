@@ -1,0 +1,38 @@
+<div class="container">
+       <app-header></app-header>
+
+    <div class="jumbotron">
+      <h1 class="display-3">Tájékoztató a szabad pályákról</h1>
+    </div>
+
+    <div class="table-responsive">
+
+	     <table class="table table-striped table-bordered arnyek">
+	         <thead>
+	            <tr class="bg-primary">
+	              <th class="text-center">Időszak</th>
+	              <th class="text-center">Hétfő</th>
+	              <th class="text-center">Kedd</th>
+	              <th class="text-center">Szerda</th>
+	              <th class="text-center">Csütörtök</th>
+	              <th class="text-center">Péntek</th>
+	              <th class="text-center">Szombat</th>
+	              <th class="text-center">Vasárnap</th>
+	            </tr>
+	         </thead>
+	         <tbody>
+	            <tr *ngFor="let pool of quote; let i = index">
+	              <td>{{ pool.idopont }}</td>
+	              <td class="text-center">{{ pool.savok[0].bar }}</td>
+	              <td class="text-center">{{ pool.savok[1].bar }}</td>
+	              <td class="text-center">{{ pool.savok[2].bar }}</td>
+	              <td class="text-center">{{ pool.savok[3].bar }}</td>
+	              <td class="text-center">{{ pool.savok[4].bar }}</td>
+	              <td class="text-center">{{ pool.savok[5].bar }}</td>
+	              <td class="text-center">{{ pool.savok[6].bar }}</td>
+	            </tr>
+	         </tbody>
+	     </table>
+	</div>
+
+</div>

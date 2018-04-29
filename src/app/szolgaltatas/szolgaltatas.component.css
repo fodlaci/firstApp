@@ -1,0 +1,20 @@
+    .example-container {
+      display: flex;
+      flex-direction: column;
+      max-height: 500px;
+      min-width: 300px;
+    }
+
+    .mat-table {
+      overflow: auto;
+      max-height: 500px;
+    }
+
+    .mat-column-select {
+      overflow: visible;
+    }
+    .arnyek {
+       max-width:800px;
+       margin: 0 auto;
+     box-shadow: 1px 1px 149px 0px rgb(24, 25, 25);
+    }

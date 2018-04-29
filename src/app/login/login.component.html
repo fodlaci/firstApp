@@ -1,0 +1,56 @@
+<p>
+  <mat-card class="card-style">
+
+
+    <mat-card-header>
+      <mat-card-title><h2>Belépés</h2></mat-card-title>
+      <mat-card-subtitle>Kérem adja meg azonosítóit!</mat-card-subtitle>
+    </mat-card-header>
+    <div align="center">
+      <img mat-cardimage src="http://ujlakuszoda.hu/angular/uszi-logo-pici.png" class="imagecardstyle"/>
+    </div>  
+
+    <form fxLayout="column" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+        <mat-card-content>
+          <div align="center">
+            <mat-form-field>
+            <input
+              type="email"
+              matInput
+              placeholder="Your email"
+              ngModel
+              name="email"
+              email
+              required
+              #emailInput="ngModel">
+            </mat-form-field>
+            <br/>
+            <mat-form-field>
+
+            <input
+              type="password"
+              matInput
+              placeholder="Your password"
+              ngModel
+              name="password"
+              required
+              minlength="6"
+              #pwInput="ngModel">
+            </mat-form-field>
+          </div>
+
+        </mat-card-content>
+        <mat-card-actions>
+          <div align="center">
+            <button type="submit" mat-raised-button color="primary">
+              Submit
+              <mat-icon>check</mat-icon>
+            </button>
+          </div>
+        </mat-card-actions>
+    </form>
+
+
+  </mat-card>
+</p>

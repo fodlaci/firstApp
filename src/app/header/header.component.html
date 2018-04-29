@@ -1,0 +1,32 @@
+    <mat-toolbar color="#9FA8DA">
+
+      <img mat-cardimage src="http://ujlakuszoda.hu/angular/uszi-logo-pici.png" class="imagecardstyle"/>
+
+        <!-- This fills the remaining space of the current row -->
+        <span class="example-fill-remaining-space"></span>
+
+        <span class="align_to_right"></span>
+        <button mat-button [routerLink]="['/login']">
+          <mat-icon>{{icon}}</mat-icon>{{belepve}}</button>
+
+    </mat-toolbar>
+
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li>
+              <a class="nav-link active" [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li>
+              <a [routerLink]="['/ticket']">Jegyárak</a>
+            </li>
+            <li>
+              <a [routerLink]="['/poolbar']">Pályatájékoztató</a>
+            </li>
+            <li>
+              <a [routerLink]="['/service']">Szolgáltatások</a>
+            </li>
+            <li>
+              <a [routerLink]="['/contakt']">Kapcsolat</a>
+            </li>
+          </ul>
+        </nav>
