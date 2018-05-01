@@ -41,7 +41,7 @@ export class CarouselComponent implements OnInit {
     this.items.push({title:"slide 2",color:"red"});
     this.items.push({title:"slide 3",color:"orange"});
 
-
+console.log("carouse elemei: ",this.items.length)
   }
 
 

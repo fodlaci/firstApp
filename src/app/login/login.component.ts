@@ -4,7 +4,8 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
+import { HeadbarService } from '../header/headbar.service';
 
 
 import 'rxjs/add/operator/map';
@@ -21,8 +22,10 @@ export class LoginComponent implements OnInit {
   books$: Observable<any>;
   authState: any = null;
   logButton = false;
+  belepve = "Belépés";
 
-  constructor(private authService: AngularFireAuth, private angularFireDatabase: AngularFireDatabase, private router: Router) {
+
+  constructor(private authService: AngularFireAuth, private angularFireDatabase: AngularFireDatabase, private router: Router, private headbar: HeadbarService) {
 
 /*   this.angularFireDatabase
       .object('/users/-gY6O2rqXHlgABd8adcdmvSe7yDg2')
@@ -59,6 +62,7 @@ export class LoginComponent implements OnInit {
 	    .valueChanges()
     	.subscribe(data => {console.log('login user: ', data),
                           console.log("path : ", path, "data: ",data),
+                          this.belepve = this.headbar.getValue(2);
                           this.router.navigateByUrl('/home');
                         }
                 );
